@@ -1,0 +1,17 @@
+---
+
+
+
+- name: Mi primer playbook
+ 
+  hosts: webserver
+
+
+  tasks:
+    - name: Personalizar el mensaje de bienvenida
+      copy:
+        content: 'Bienvenido al curso de Ansible'
+        dest: /etc/motd
+      become: yes
+...
+

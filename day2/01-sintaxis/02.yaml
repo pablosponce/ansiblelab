@@ -1,0 +1,17 @@
+---
+# Los contenidos en YAML empiezan con tres guiones: ---
+
+# El signo - implica que es una lista. Un playbook está formado por una lista de "plays" 
+# Cada item de esa lista (es decir, cada play) contendrá un diccionario.
+-
+
+  # hosts: el servidor destino donde se ejecutan nuestras tareas definidas. Puede incluir variables.
+
+  # vars: Definición de variables "globales", que se utilizan en todo el documento.
+
+  # tasks: La lista de tareas a ejecutar
+
+  # handlers: La lista de handlers que serán utilizados para controlar y notificar las tareas..
+
+# Los tres puntos consecutivos indican el final del contenido YAML
+...

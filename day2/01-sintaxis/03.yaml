@@ -1,0 +1,17 @@
+---
+
+
+
+- name: Mi primer playbook
+ 
+  hosts: webserver
+
+
+  tasks:
+    - name: Personalizar el mensaje de bienvenida
+      copy:
+        src: /tmp/motd
+        dest: /etc/motd
+
+...
+

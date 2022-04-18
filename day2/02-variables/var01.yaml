@@ -1,0 +1,19 @@
+---
+
+
+
+- name: Mi primer playbook
+ 
+  hosts: webserver
+
+  vars:
+    motd: 'Bienvenido al curso de Ansible, ahora con variables!'
+
+  tasks:
+    - name: Personalizar el mensaje de bienvenida
+      copy:
+        content: '{{ motd }}'
+        dest: /etc/motd
+      become: yes
+...
+

@@ -1,0 +1,30 @@
+---
+
+
+
+- name: Mi primer playbook con variables
+ 
+  hosts: localhost
+
+  vars:
+    motd: 
+      cursoAnsible: 'Bienvenido al curso de Ansible, ahora con variables'
+      cursoDocker: 'Bienvenido al curso de Docker, con extra de variables'
+
+
+  tasks:
+    - name: Test named dictionary dictionary
+      debug:
+        msg: "{{ motd  }}"
+ 
+    - name: Test named dictionary dictionary key value with dictionary dot notation
+      debug:
+        msg: "{{ motd.cursoAnsible }}"
+ 
+    - name: Test named dictionary dictionary key value with python brackets notation
+      debug:
+        msg: "{{ motd['cursoAnsible'] }}"
+ 
+
+...
+

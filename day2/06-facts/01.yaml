@@ -1,0 +1,14 @@
+---
+-
+ 
+  hosts: webserver
+  #gather_facts = false
+
+  tasks:
+    - name: Mostrar IP
+      debug:
+        msg: "{{ ansible_default_ipv4.address }}"
+
+#Para listar facts: ansible webserver -m setup
+...
+
