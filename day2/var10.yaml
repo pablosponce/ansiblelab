@@ -1,0 +1,17 @@
+---
+-
+
+  hosts: webserver
+
+  tasks:
+    - name: Registrando el hostname para su posterior uso
+      command: hostname 
+      register: hostname_var
+
+    - name: Mostrar hostname
+      debug:
+        var: hostname_var
+#        var: hostname_var.stdout
+
+
+...

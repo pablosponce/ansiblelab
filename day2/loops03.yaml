@@ -1,0 +1,22 @@
+---
+
+-
+  name: Bucles1
+
+  hosts: localhost
+
+  tasks:
+    - name: Crear multiples usuarios
+      user:
+        name: "{{ item }}"
+        state: absent
+      become: yes
+
+      with_items:
+         - testuser1
+         - testuser2
+
+
+
+...
+

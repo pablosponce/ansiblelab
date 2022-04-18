@@ -1,0 +1,13 @@
+---
+-
+ 
+  hosts: ubuntu
+ 
+
+  tasks:
+    - name: Test groupvars
+      debug:
+        msg: "{{ ansible_user }}"
+
+...
+

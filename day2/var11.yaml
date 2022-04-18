@@ -1,0 +1,12 @@
+---
+-
+
+  hosts: linux
+
+  tasks:
+    - name: Condicionales
+      command: ls -l
+      when: ansible_distribution == "Amazon" #Posible utilizar operadores and/or
+
+...
+

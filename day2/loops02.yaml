@@ -1,0 +1,28 @@
+---
+
+-
+  name: Bucles2
+
+  hosts: localhost
+
+  tasks:
+    - name: Crear multiples usuarios
+      user:
+        name: "{{ item.name }}"
+        state: present
+        groups: "{{ item.group }}"
+      become: yes
+
+      loop:
+         - 
+           name: testuser1
+           group: wheel
+
+         - 
+           name: testuser2
+           group: wheel
+
+
+
+...
+

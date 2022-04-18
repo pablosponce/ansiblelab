@@ -1,0 +1,22 @@
+---
+-
+
+  hosts: webserver
+
+  tasks:
+    - name: Esto es un bloque 
+      block:
+        - name: Primero
+          debug:
+            msg: Soy el primero
+
+        - name: Segundo
+          debug:
+            msg: Soy el segundo
+
+        - name: Tercero
+          debug:
+            msg: Soy el tercero
+
+...
+

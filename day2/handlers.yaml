@@ -1,0 +1,22 @@
+---
+
+-
+
+  hosts: webserver
+
+  tasks:
+
+    - name: Mantener git actualizado
+      yum:
+        name: git
+        state: latest
+      notify: Actualizar
+      become: yes
+
+  handlers:
+   - name: Actualizar
+     debug:
+       msg: Ha sido necesario actualizar
+...
+
+
