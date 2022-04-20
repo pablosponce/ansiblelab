@@ -1,0 +1,13 @@
+---
+-
+
+  hosts: localhost
+
+  vars:
+     password: nosoyseguro
+  tasks:
+    - debug:
+       msg: 'Mi contraseña es: {{ password }}'
+
+
+...

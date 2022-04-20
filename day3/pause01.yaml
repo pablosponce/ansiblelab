@@ -1,0 +1,18 @@
+---
+-
+
+  hosts: localhost
+
+  tasks:
+  
+    - name: Primera tarea
+      debug:
+        msg: 'Realizando la primera tarea'
+
+    - name: Añadimos retraso forzado
+      pause:
+        seconds: 10
+
+    - name: Segunda tarea
+      debug:
+        msg: 'Realizando la segunda tarea'

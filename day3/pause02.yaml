@@ -1,0 +1,12 @@
+---
+-
+
+  hosts: localhost
+
+  tasks:
+    - name: Prompt user to verify before continue
+      pause:
+        prompt: Haz tu comprobación manual, pulsa Enter para continuar
+
+...
+

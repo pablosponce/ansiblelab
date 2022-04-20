@@ -1,0 +1,14 @@
+---
+-
+
+  hosts: localhost
+
+  vars_files:
+    - secretvars.yaml  
+
+  tasks:
+    - debug:
+       msg: 'Mi contraseña es: {{ password }}'
+
+
+...

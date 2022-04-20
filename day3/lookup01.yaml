@@ -1,0 +1,17 @@
+---
+-
+
+  hosts: localhost
+
+  vars:
+    dns_value: "{{ lookup('file', '/etc/resolv.conf') }}"
+    path_value: "{{ lookup('env', 'PATH') }}"
+  tasks:
+    - debug:
+       msg: "Los servidores DNS son {{ dns_value }}"
+    - debug:
+       msg: "El path es: {{ path_value }}"
+
+#ansible-doc -l -t lookup
+
+...
