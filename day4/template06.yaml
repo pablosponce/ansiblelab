@@ -1,0 +1,15 @@
+---
+-
+
+  hosts: localhost
+ 
+  vars:
+    departamento: RRHH
+
+  tasks:
+    - name: Templating con plantilla en fichero
+      template:
+        src: template.j2
+        dest: /tmp/myapp.conf
+...
+

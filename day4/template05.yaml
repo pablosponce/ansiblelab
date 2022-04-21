@@ -1,0 +1,19 @@
+---
+-
+
+  hosts: localhost
+
+  tasks:
+    - name: Templating con condicionales
+      debug:
+        msg: |
+             {% if ansible_hostname == "dbserver" %}
+                Soy el servidor de base de datos
+             {% elif ansible_hostname == "webserver" %}
+                Soy el servidor web
+             {% else %}
+                Solo se que me llamo {{ ansible_hostname }}
+             {% endif %}
+
+...
+

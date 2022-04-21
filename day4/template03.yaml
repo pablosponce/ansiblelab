@@ -1,0 +1,15 @@
+---
+
+-
+
+  hosts: localhost
+
+  tasks:
+    - name: Filters con URL
+      debug:
+        msg: >-
+             El hostname es {{ "https://www.codepile.net/pile/a8nrk48D" | urlsplit('hostname') }}
+             El path es {{ "https://www.codepile.net/pile/a8nrk48D" | urlsplit('path') }}
+             La url troceada es {{ "https://www.codepile.net/pile/a8nrk48D" | urlsplit }}
+...
+

@@ -1,0 +1,17 @@
+---
+-
+
+  hosts: web
+#  serial: 2
+
+  tasks:
+    - name: Primera tarea
+      command: sleep 5
+
+    - name: Segunda tarea
+      command: sleep 5
+
+    - name: Tercera tarea
+      command: sleep 5
+
+...

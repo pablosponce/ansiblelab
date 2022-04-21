@@ -1,0 +1,11 @@
+---
+
+-
+
+  hosts: localhost
+
+  tasks:
+    - name: Tests
+      debug:
+        msg: Mi version de SO está actualizada
+      when: ansible_facts['distribution_version'] is version('12.3', '>=') 

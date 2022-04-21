@@ -1,0 +1,16 @@
+-
+    name: Verificador de edad
+
+    hosts: localhost
+    vars_prompt:
+        name: age
+    tasks:
+        -
+          debug:
+            msg: 'Soy menor de edad'
+          when: ({{age}} | int) < 18
+        -
+          debug:
+            msg: Soy mayor de edad
+          when: ( age | int)  >= 18
+

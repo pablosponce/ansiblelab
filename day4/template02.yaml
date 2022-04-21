@@ -1,0 +1,16 @@
+---
+-
+
+  hosts: localhost
+
+  tasks:
+    - name: Templates con filtros de datos
+      debug:
+        msg: >-
+
+             El minimo es {{ [1, 2, 3, 4, 5] | min }}
+             El maximo es {{ [1, 2, 3, 4, 5] | max }}
+             Un aleatorio es {{ [1, 2, 3, 4, 5] | random }}
+
+...
+

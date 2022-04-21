@@ -1,0 +1,22 @@
+---
+-
+
+  hosts: web
+# strategy: free
+
+  tasks:
+    - name: Primera tarea
+      command: sleep {{ 15 |random}}
+
+    - name: Segunda tarea
+      command: sleep {{ 15 |random}}
+
+    - name: Tercera tarea
+      command: sleep {{ 15 |random}}
+
+    - name: Cuarta tarea
+      command: sleep {{ 15 |random}}
+
+    - name: Ultima tarea
+      command: sleep {{ 15 |random}}
+...
