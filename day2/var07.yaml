@@ -1,17 +1,13 @@
 ---
- 
 -
  
-  hosts: localhost
+  hosts: ubuntu
  
-  vars_prompt:
-    - name: credencial
-      private: true
- 
+
   tasks:
-    - name: Variables pasadas por teclado
+    - name: Test groupvars
       debug:
-        msg: "{{ credencial }}"
- 
+        msg: "{{ ansible_user }}"
+
 ...
 

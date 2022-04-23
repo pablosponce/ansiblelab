@@ -1,0 +1,17 @@
+---
+-
+  name: ejercicio_bucles_gcc
+  hosts: webserver
+
+  vars:
+    paquetes:
+     - gcc
+     - make
+  tasks:
+    - name: checkear isntalcion
+
+      yum:
+        name: "{{ item }}"
+        state: latest
+      loop: '{{ paquetes }}'
+...

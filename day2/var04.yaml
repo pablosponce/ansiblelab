@@ -2,26 +2,23 @@
 
 
 
-- name: Mi primer playbook con variables
+- name: Mi primer playbook con variables usando listas
  
   hosts: localhost
 
-  vars:
-    motd: 
-      - cursoAnsible: 'Bienvenido al curso de Ansible, ahora con variables'
-      - cursoDocker: 'Bienvenido al curso de Docker, con extra de variables'
-
+  vars_files:
+    - auxvar04.yaml
 
   tasks:
-    - name: Test named dictionary dictionary
+    - name: Mostrar variable entera
       debug:
         msg: "{{ motd  }}"
  
-    - name: Test named dictionary dictionary key value with dictionary dot notation
+    - name: Mostrar primer elemento de la lista
       debug:
         msg: "{{ motd.0 }}"
  
-    - name: Test named dictionary dictionary key value with python brackets notation
+    - name: Equivalente al anterior pero con formato tipo python
       debug:
         msg: "{{ motd[0] }}"
  

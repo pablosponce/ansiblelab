@@ -5,13 +5,13 @@
   hosts: localhost
  
   vars_prompt:
-    - name: usuario
-      private: false
+    - name: credencial
+      private: true
  
   tasks:
     - name: Variables pasadas por teclado
       debug:
-        msg: "{{ usuario }}"
+        msg: "{{ credencial }}"
  
 ...
 

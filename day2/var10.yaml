@@ -1,17 +1,20 @@
 ---
+
 -
 
-  hosts: webserver
+  hosts: linux
 
   tasks:
-    - name: Registrando el hostname para su posterior uso
-      command: hostname 
-      register: hostname_var
+    - name: Ejecutar solamente en AMI
+      command: ls -l
+      when: 
+        - ansible_distribution == "Amazon" #Se pueden utilizar en lista para multiples condiciones (op. AND)
+        - ansible_os_family == "RedHat"
+      register: ls_output
 
-    - name: Mostrar hostname
+    - name: Mostrar registro
       debug:
-        var: hostname_var
-#        var: hostname_var.stdout
-
+        var: ls_output.stdout
 
 ...
+

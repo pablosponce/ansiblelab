@@ -15,7 +15,7 @@
   tasks:
     - name: Test named dictionary dictionary
       debug:
-        msg: "{{ motd  }}"
+        msg: '{{ motd }}'
  
     - name: Test named dictionary dictionary key value with dictionary dot notation
       debug:
@@ -23,7 +23,7 @@
  
     - name: Test named dictionary dictionary key value with python brackets notation
       debug:
-        msg: "{{ motd['cursoAnsible'] }}"
+        msg: "{{ motd['cursoDocker'] }}"
  
 
 ...

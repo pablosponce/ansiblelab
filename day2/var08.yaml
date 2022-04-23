@@ -1,13 +1,17 @@
 ---
 -
- 
-  hosts: ubuntu
- 
+
+  hosts: webserver
 
   tasks:
-    - name: Test groupvars
+    - name: Registrando el hostname para su posterior uso
+      command: hostname 
+      register: hostname_var
+
+    - name: Mostrar hostname
       debug:
-        msg: "{{ ansible_user }}"
+        var: hostname_var
+#        var: hostname_var.stdout
+
 
 ...
-
